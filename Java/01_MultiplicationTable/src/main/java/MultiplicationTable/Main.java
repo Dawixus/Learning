@@ -1,7 +1,7 @@
 package MultiplicationTable;
 
 public class Main {
-    private static final int MAX_MULTIPLIER = 10;
+
     static int getNumberDigitSize(int number)
     {
         final int BASE = 10;
@@ -14,8 +14,10 @@ public class Main {
         return size;
     }
 
-    static void main(String[] args) {
-        int parameter = Integer.parseInt(args[0]);
+    static void print_multiplication_table(int parameter)
+    {
+        final int MAX_MULTIPLIER = 10;
+
         int maxProductLength = getNumberDigitSize(parameter * MAX_MULTIPLIER);
         int maxFactorLength = getNumberDigitSize(MAX_MULTIPLIER);
 
@@ -25,5 +27,9 @@ public class Main {
             String spacesBeforeProduct = " ".repeat(maxProductLength - getNumberDigitSize(product));
             System.out.println(spacesFromStart + i + " * " + parameter + " = " + spacesBeforeProduct + product);
         }
+    }
+
+    static void main(String[] args) {
+        print_multiplication_table(Integer.parseInt(args[0]));
     }
 }
