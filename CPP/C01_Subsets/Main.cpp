@@ -18,7 +18,7 @@ void printSubset(const char items[], const bool signature[], const size_t count)
     std::cout << " }" << std::endl;
 }
 
-void findSubsetsRecursive(const char items[], bool signature[], const size_t count, const size_t index)
+void findSubsetsRecursive(const char items[], bool signature[], const size_t count, const size_t index = 0)
 {
     if (index == count)
     {
@@ -37,7 +37,7 @@ void findSubsets(const char items[], const size_t count)
 {
     bool* signature = new bool[count];
  
-    findSubsetsRecursive(items, signature, count, 0);
+    findSubsetsRecursive(items, signature, count);
  
     delete[] signature;
 }

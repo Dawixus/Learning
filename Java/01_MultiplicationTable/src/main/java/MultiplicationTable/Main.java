@@ -1,4 +1,4 @@
-package MultiplicationTable;
+package school.homeworks.multiplicationtable;
 
 public class Main {
 

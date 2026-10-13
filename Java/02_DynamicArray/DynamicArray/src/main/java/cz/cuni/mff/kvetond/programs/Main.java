@@ -1,4 +1,7 @@
-package DynamicArray;
+package cz.cuni.mff.kvetond.programs;
+
+import cz.cuni.mff.kvetond.toolkit.DynamicArray;
+
 public class Main {
     static void main(String[] args) {
         var dynArr = new DynamicArray<String>();
@@ -7,8 +10,8 @@ public class Main {
             dynArr.add(arg);
         }
 
-        for (var element : dynArr) {
-            System.out.println(element);
+        for (int i = 0; i < dynArr.getLength(); i++){
+            IO.println(dynArr.get(i));
         }
     }
 }
