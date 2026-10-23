@@ -49,6 +49,7 @@ public class DynamicArray<T> implements SimpleCollection<T> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public T get(int index)
     {
         if (index < 0 || index >= length) {
@@ -74,7 +75,7 @@ public class DynamicArray<T> implements SimpleCollection<T> {
 
         shiftElementsInArray(i);
         length--;
-        if (length * 2 < maxLength)
+        if (length * 2 < maxLength && 1 < maxLength)
             realocate(maxLength / 2);
     }
 

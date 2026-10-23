@@ -1,6 +1,6 @@
 package cz.cuni.mff.kvetond.toolkit;
 
-interface SimpleCollection<T> {
+public interface SimpleCollection<T> {
     void add(T o);
     T get(int i);
     void remove(T o);
